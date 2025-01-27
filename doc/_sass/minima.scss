@@ -1,0 +1,77 @@
+// _sass/minima.scss
+
+// 1. 変数の上書き（Qiitaのテーマカラーを反映）
+$brand-color: #55c500; // Qiitaの緑色
+$text-color: #333;
+$background-color: #fff;
+$grey-color-light: #f8f8f8;
+
+// 2. 基本スタイルのカスタマイズ
+@import "minima/base";
+
+// 3. レイアウトのカスタマイズ（ヘッダー/記事リスト）
+@import "minima/layout";
+
+// 4. シンタックスハイライト調整
+@import "minima/syntax-highlighting";
+
+// 5. 追加カスタマイズ（Qiita風要素）
+// -------------------------------------------------
+
+/* ヘッダー（Qiita風ナビゲーションバー） */
+.site-header {
+  background: $brand-color;
+  border-bottom: 1px solid darken($brand-color, 10%);
+  padding: 1rem 0;
+
+  .site-title {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .page-link {
+    color: rgba(white, 0.9);
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+/* 記事リスト（Qiita風カード型レイアウト） */
+.post-list {
+  > li {
+    background: $grey-color-light;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    .post-meta {
+      color: lighten($text-color, 20%);
+      font-size: 0.9rem;
+    }
+  }
+}
+
+/* コードブロック（Qiita風シンタックス） */
+.highlight {
+  background: #f6f8fa;
+  border-radius: 6px;
+  pre {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+}
+
+/* カテゴリタグ（Qiita風バッジ） */
+.category-tag {
+  display: inline-block;
+  background: $brand-color;
+  color: white;
+  padding: 0.2rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,21 @@
+# Site settings
+title: Your Site Title
+description: Your site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Optional: Enable syntax highlighting
+highlighter: rouge
