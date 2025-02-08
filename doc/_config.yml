@@ -1,14 +1,32 @@
 # Site settings
-title: Your Site Title
-description: Your site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-
+title: My Qiita-like Site
+description: Qiita風のサイトです。
+baseurl: ""         # サブパスを利用する場合は例: /blog
+url: "https://example.com"  # サイトのURL（ホスト名）を設定
 
 # Build settings
 markdown: kramdown
-theme: minima
+highlighter: rouge
+
+# もしサイトのデザインを独自に実装する場合は、既存テーマを使わずにカスタムレイアウトを利用してください。
+# theme: minima
+
+# カスタマイズしやすいテーマを利用する例（または完全に独自作成も可）
+theme: jekyll-theme-minimal
+
+# プラグインの設定（必要に応じて追加）
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+
+# Sassの設定（カスタムスタイル用）
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Paginationの設定（記事一覧にページネーションを実装する場合）
+paginate: 10
+paginate_path: "/page:num/"
 
 # Exclude from processing
 exclude:
@@ -16,6 +34,3 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
-
-# Optional: Enable syntax highlighting
-highlighter: rouge
